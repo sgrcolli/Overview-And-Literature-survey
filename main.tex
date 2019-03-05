@@ -1,0 +1,95 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\captionsetup[table]{font={stretch=1.5}}     %% change 1.5 as you like
+\captionsetup[figure]{font=onehalfspacing}    %% change onehalfspacing as you like
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[top=0.75in,left=0.75in,right=0.75in,bottom=0.75in]{geometry}
+\usepackage{multicol,caption}
+\usepackage{makeidx}
+\usepackage{pdfpages}
+\usepackage[compat=1.0.0]{tikz-feynman}
+\usepackage{hyperref}
+%\usepackage{LuaLaTeX}
+\makeindex
+%\usepackage{fixltx2e}
+\usepackage{cite}
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+\setlength{\columnsep}{1cm}
+\setlength{\parindent}{0pt}
+\usepackage{color,soul}
+\usepackage{booktabs}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\title{Overview and Literature survey}
+\date{\today}
+\author{Ronald Collins ID:200948843}
+
+\begin{document}
+\maketitle
+
+\begin{Figure}
+ \centering
+ \includegraphics[width=1.0\linewidth]{Liverpool_logo}
+ \captionof*{figure}{} 
+\end{Figure}
+
+
+\begin{center}
+\textit{Department of Physics, High Energy Physics\\}
+\textit{VIDARR collaboration\\}
+\end{center}
+
+
+\pagenumbering{gobble}
+\newpage
+\pagenumbering{roman}
+\begin{abstract}
+\normalsize A basic overview\\
+
+\providecommand{\keywords}[1]{\textbf{\textit{Keywords:}} #1} %Keywords command has to be supplied manually
+\keywords{Monte Carlo, Geant4, High performance computing (HPC), Anti-neutrino}
+\end{abstract}
+\vspace{5mm} %5mm vertical space before main body of text
+%\begin{multicols}{2}
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+
+\section{Discovery of neutrinos}
+\subsection{Theoretical Development}
+history of neutrino: \cite{griffiths2008introduction} \cite{lederman1970resource}
+\\beta decay of tritium: \cite{lewis1970neutrinos}
+\\Potentially useful: \cite{bernstein2004elusive}, 
+
+
+
+\subsection{Direct Measurements}
+
+\section{Anti-neutrino Reactor Monitoring}
+\subsection{Anti-neutrino Production}
+\subsection{Anti-neutrino Detection}
+
+\section{Solar Neutrinos}
+
+\section{Mixing Angles}
+\subsection{Neutrino Flavours}
+
+\section{Existing Reactor monitoring programs}
+
+\bibliography{refs} 
+\bibliographystyle{ieeetr}
+
+\end{document}
