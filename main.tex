@@ -12,6 +12,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{braket}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage[top=1.0in,left=1.0in,right=1.0in,bottom=1.0in]{geometry}
 \usepackage[
@@ -263,7 +264,76 @@ $^8$B $\rightarrow$ $^8$Be$^*$+e$^+$+ $\nu_e$   & $^8$B             & 5.05 $\tim
 \caption{Neutrino production from fusion reactions in the Sun from \cite{Bellerive:2003rj} }
 \label{solar_nuetrino_table}
 \end{table*}
-\\In order to predict the number of neutrinos that are supposed to oscillate between one form and another there are two approaches that can be taken, the first approach is to treat the two system as a linear combination of eigenstates $\nu_e$ $\nu_\mu$ \cite{griffiths2008book}\cite{griffiths2008neutrinoOscillations} \cite{sassaroli1999neutrino}. Then there is the full quantum mechanical treatment of neutrino oscillations which uses ``DIAGONALIZATION OF THE TWO COUPLED DIRAC EQUATIONS'' and ``FIELD QUANTIZATION, ANTICOMMUTATION RELATIONS, AND FLAVOR WAVE FUNCTIONS'' \cite{sassaroli1999neutrino}. The following approach will use a linear combination of eigenstates.
+\\In order to predict the number of neutrinos that are supposed to oscillate between one form and another there are two approaches that can be taken, the first approach is to treat the two system as a linear combination of eigenstates $\nu_e$ $\nu_\mu$ \cite{griffiths2008book}\cite{griffiths2008neutrinoOscillations} \cite{sassaroli1999neutrino}. Then there is the full quantum mechanical treatment of neutrino oscillations which uses ``DIAGONALIZATION OF THE TWO COUPLED DIRAC EQUATIONS'' and ``FIELD QUANTIZATION, ANTICOMMUTATION RELATIONS, AND FLAVOR WAVE FUNCTIONS'' \cite{sassaroli1999neutrino}. The following approach will use a linear combination of eigenstates which is considered the ``standard treatment'' \cite{sassaroli1999neutrino} \cite{griffiths2008book} \cite{griffiths2008neutrinoOscillations}.
+\\\\Let's begin with two eigenstates with $\nu_1$ and $\nu_2$: 
+\begin{equation}
+    \begin{bmatrix}
+        \ket{\nu_1} \\
+        \ket{\nu_2}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        \cos\theta & -\sin\theta \\
+        \sin\theta & \cos\theta 
+    \end{bmatrix}
+        \begin{bmatrix}
+        \ket{\nu_e} \\
+        \ket{\nu_\mu}
+    \end{bmatrix}
+    \label{linear_combination_eq_1}
+\end{equation}
+\begin{equation}
+    \begin{bmatrix}
+        C_1(t) \\
+        C_2(t)
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        \cos\theta & -\sin\theta \\
+        \sin\theta & \cos\theta 
+    \end{bmatrix}
+        \begin{bmatrix}
+        C_e(t) \\
+        C_\mu(t)
+    \end{bmatrix}
+    \label{linear_combination_eq_2}
+\end{equation}
+\begin{equation}
+    \begin{bmatrix}
+        C_e(t) \\
+        C_\mu(t)
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        \cos\theta & -\sin\theta \\
+        \sin\theta & \cos\theta 
+    \end{bmatrix}
+        \begin{bmatrix}
+        C_1(0)e^{-iE_1t} \\
+        C_2(0)e^{-iE_2t}
+    \end{bmatrix}
+    \label{linear_combination_eq_3}
+\end{equation}
+\begin{equation}
+    C_\mu(0) = 1, \quad C_e(0) = 0
+    \label{linear_combination_eq_4}
+\end{equation}
+\begin{equation}
+    C_1(0) = -\sin\theta, \quad C_2(0) = \cos\theta
+    \label{linear_combination_eq_5}
+\end{equation}
+\begin{equation}
+    C_e(t)=\sin\theta\cos\theta(e^{-iE_2t}-e^{-iE_1t})
+    \label{linear_combination_eq_6}
+\end{equation}
+\begin{equation}
+    C_\mu(t)=\sin^{2}e^{-iE_1t} + \cos^{2}e^{-iE_2t}
+    \label{linear_combination_eq_7}
+\end{equation}
+\begin{equation}
+   E_1^2=m_1^2 + p^2, \quad E_2^2=m_2^2  , \quad L \approx t
+    \label{linear_combination_eq_8}
+\end{equation}
 
 \subsection{Mixing Angles}
 
