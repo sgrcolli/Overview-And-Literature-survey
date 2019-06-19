@@ -10,6 +10,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
+\usepackage{mathtools}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{braket}
@@ -264,7 +265,7 @@ $^8$B $\rightarrow$ $^8$Be$^*$+e$^+$+ $\nu_e$   & $^8$B             & 5.05 $\tim
 \caption{Neutrino production from fusion reactions in the Sun from \cite{Bellerive:2003rj} }
 \label{solar_nuetrino_table}
 \end{table*}
-\\In order to predict the number of neutrinos that are supposed to oscillate between one form and another there are two approaches that can be taken, the first approach is to treat the two system as a linear combination of eigenstates $\nu_e$ $\nu_\mu$ \cite{griffiths2008book}\cite{griffiths2008neutrinoOscillations} \cite{sassaroli1999neutrino}. Then there is the full quantum mechanical treatment of neutrino oscillations which uses ``DIAGONALIZATION OF THE TWO COUPLED DIRAC EQUATIONS'' and ``FIELD QUANTIZATION, ANTICOMMUTATION RELATIONS, AND FLAVOR WAVE FUNCTIONS'' \cite{sassaroli1999neutrino}. The following approach will use a linear combination of eigenstates which is considered the ``standard treatment'' \cite{sassaroli1999neutrino} \cite{griffiths2008book} \cite{griffiths2008neutrinoOscillations}.
+\\In order to predict the number of neutrinos that are supposed to oscillate between one form and another there are two approaches that can be taken, the first approach is to treat the two system as a linear combination of eigenstates $\nu_e$ $\nu_\mu$ \cite{griffiths2008book}\cite{griffiths2008neutrinoOscillations} \cite{sassaroli1999neutrino}. Then there is the full quantum mechanical treatment of neutrino oscillations which uses ``Diagonalization of the two coupled direc equations'' and ``Field quantization, anticommutation relations and flavor wave functions'' \cite{sassaroli1999neutrino}. The following approach will use a linear combination of eigenstates which is considered the ``standard treatment'' \cite{sassaroli1999neutrino} \cite{griffiths2008book} \cite{griffiths2008neutrinoOscillations}.
 \\\\Let's begin with two eigenstates with $\nu_1$ and $\nu_2$: 
 \begin{equation}
     \begin{bmatrix}
@@ -282,6 +283,12 @@ $^8$B $\rightarrow$ $^8$Be$^*$+e$^+$+ $\nu_e$   & $^8$B             & 5.05 $\tim
     \end{bmatrix}
     \label{linear_combination_eq_1}
 \end{equation}
+We then introduce $C_e$ and $C_\mu$ which are the amplitudes for detecting an electron neutrino and a muon neutrino, respectively. And introduce $C_1$ and $C_2$ which are the amplitudes for finding the neutrino in the energy states $E_1$ and $E_2$ , respectively. The coefficients $C_1$ and $C_2$ evolve in time as:
+\begin{equation}
+    C_1(t) = C_1(0)e^{-iE_1t}, \quad  C_2(t) = C_2(0)e^{-iE_2t}
+    \label{linear_combination_eq_1.5}
+\end{equation}
+Which we know from the schrodinger equation \cite{sassaroli1999neutrino} \cite{griffiths2008book}\cite{griffiths2008neutrinoOscillations}. 
 \begin{equation}
     \begin{bmatrix}
         C_1(t) \\
@@ -333,6 +340,14 @@ $^8$B $\rightarrow$ $^8$Be$^*$+e$^+$+ $\nu_e$   & $^8$B             & 5.05 $\tim
 \begin{equation}
    E_1^2=m_1^2 + p^2, \quad E_2^2=m_2^2  , \quad L \approx t
     \label{linear_combination_eq_8}
+\end{equation}
+\begin{equation}
+   {\mid{C_e}\mid}^2 = sin^2(2\theta)sin^2[(E_2-E_1)t/2] \approx sin^2(2\theta)sin^2\left[\frac{(m_1^2-m_2^2)L}{4E}\right]
+    \label{linear_combination_eq_9}
+\end{equation}
+\begin{equation}
+    {\mid{C_\mu}\mid}^2 = 1 - sin^2(2\theta)sin^2[(E_2-E_1)t/2] \approx 1 - sin^2(2\theta)sin^2\left[\frac{(m_1^2-m_2^2)L}{4E}\right]
+    \label{linear_combination_eq_10}
 \end{equation}
 
 \subsection{Mixing Angles}
